@@ -15,10 +15,22 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?/,
+                test: /\.jsx?$/,
                 loader: "babel-loader",
                 options: {
-                    presets: ["@babel/preset-env", "@babel/preset-react"],
+                    presets: [
+                        [
+                            "@babel/preset-env",
+                            {
+                                targets: {
+                                    // preset의 플러그인 중 지난 브라우저 적용 플러그인
+                                    browsers: ["> 5% in KR"], // browserslist
+                                },
+                                debug: true,
+                            },
+                        ],
+                        "@babel/preset-react",
+                    ],
                     plugins: ["@babel/plugin-proposal-class-properties"],
                 },
             },

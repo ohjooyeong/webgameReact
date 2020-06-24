@@ -1,6 +1,6 @@
 const React = require("react");
-const ReactDom = require("react-dom");
+const ReactDOM = require("react-dom");
 
-const lastWord = require("./lastWord");
+const WordRelay = require("./lastWord");
 
-ReactDom.render(<lastWord />, document.querySelector("#root"));
+ReactDOM.render(<WordRelay />, document.querySelector("#root"));
