@@ -2,7 +2,7 @@ const React = require("react");
 const ReactDOM = require("react-dom");
 const { hot } = require("react-hot-loader/root");
 
-const WordRelay = require("./lastWord");
+const WordRelay = require("./WordRelayHooks");
 
 const Hot = hot(WordRelay);
 
